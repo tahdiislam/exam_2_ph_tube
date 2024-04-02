@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PH Tube</title>
     <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css"
       rel="stylesheet"
@@ -29,35 +29,24 @@
       </a>
       <ul class="menu menu-horizontal px-1">
         <li>
-          <button
-            id="sort_by_views"
-            onclick="handleSort()"
+          <a
+            href="./index.html"
             class="bg-[#FF1F3D] text-base btn btn-error btn-sm text-white"
           >
-            Sort by view
-          </button>
+            Home
+          </a>
         </li>
       </ul>
       <ul class="menu menu-horizontal px-1">
         <li>
-          <a
-            href="./blogs.html"
+          <button
             class="bg-[#FF1F3D] text-base btn btn-error btn-sm text-white"
           >
             Blog
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
-    <section
-      id="categories"
-      class="w-full flex justify-center items-center gap-2 md:gap-3 lg:gap-4 py-4 lg:py-6"
-    ></section>
-    <section
-      id="videos"
-      class="px-8 md:px-10 lg:px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 sm:gap-6 md:gap-6"
-    ></section>
-    <section id="nocontent"></section>
-    <script src="./script.js"></script>
+    <section></section>
   </body>
 </html>
