@@ -24,14 +24,16 @@
     <nav
       class="navbar bg-base-100 flex justify-between items-center border text-white md:px-4 lg:px-10 shadow-md"
     >
-      <a class="btn btn-ghost text-xl" href="/index.html">
-        <img src="./icons/Logo.png" alt="logo" />
-      </a>
+      <button class="btn no-animation rounded-sm max-w-[30%]">
+        <a href="/index.html">
+          <img class="w-full h-full" src="./icons/Logo.png" alt="logo" />
+        </a>
+      </button>
       <ul class="menu menu-horizontal px-1">
         <li>
           <a
             href="./index.html"
-            class="bg-[#FF1F3D] text-base btn btn-error btn-sm text-white"
+            class="bg-[#FF1F3D] text-base btn btn-error btn-sm text-white rounded-md no-animation"
           >
             Home
           </a>
@@ -39,14 +41,66 @@
       </ul>
       <ul class="menu menu-horizontal px-1">
         <li>
-          <button
-            class="bg-[#FF1F3D] text-base btn btn-error btn-sm text-white"
+          <a
+            target="_blank"
+            href="./blogs.html"
+            class="bg-[#FF1F3D] text-sm md:text-base btn btn-error no-animation btn-sm text-white rounded-md"
           >
             Blog
-          </button>
+          </a>
         </li>
       </ul>
     </nav>
-    <section></section>
+    <section
+      class="flex flex-col justify-center items-center w-full md:w-8/12 lg:w-6/12 mx-auto my-12 lg:my-20"
+    >
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          Discuss the scope of var, let, and const
+        </div>
+        <div class="collapse-content">
+          <p class="text-lg text-justify">
+            A variable declared with var is a function scope if declare inside
+            of a function otherwise global scope. And a variable declared with
+            let and const is block scope, which mean if we declare a variable
+            with let and const inside a curly braces {} (block of code) the
+            variable will only accessed inside the block.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          Tell us the use cases of null and undefined
+        </div>
+        <div class="collapse-content">
+          <p class="text-lg text-justify">
+            Null is an assignment value. It used to indicate that a variable is
+            supposed to have no value. It's different from being empty or having
+            zero.We can use it to assign a variable which has no value and is
+            empty. And Undefined means we create a variable without assign a
+            value and if we want to access a variable which is not declared then
+            we will also get an undefined value
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What do you mean by REST API?
+        </div>
+        <div class="collapse-content">
+          <p class="text-lg text-justify">
+            REST API is a set of guidelines that allow application to
+            communicate with each other over the internet. REST API is one of
+            the most popular type of API architecture. We can communicate with
+            servers using protocol like HTTP. REST stands for representational
+            State Transfer. REST API's are state less so we can use it in the
+            other other platform like Android or desktop application.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

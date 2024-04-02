@@ -8,7 +8,7 @@
     <title>PH Tube</title>
     <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css"
       rel="stylesheet"
@@ -24,15 +24,17 @@
     <nav
       class="navbar bg-base-100 flex justify-between items-center border text-white md:px-4 lg:px-10 shadow-md"
     >
-      <a class="btn btn-ghost text-xl" href="/index.html">
-        <img src="./icons/Logo.png" alt="logo" />
-      </a>
+      <button class="btn no-animation rounded-sm max-w-[30%]">
+        <a href="/index.html">
+          <img class="w-full h-full" src="./icons/Logo.png" alt="logo" />
+        </a>
+      </button>
       <ul class="menu menu-horizontal px-1">
         <li>
           <button
             id="sort_by_views"
             onclick="handleSort()"
-            class="bg-[#FF1F3D] text-base btn btn-error btn-sm text-white"
+            class="bg-[#FF1F3D] text-sm no-animation md:text-base btn btn-error btn-sm text-white rounded-md"
           >
             Sort by view
           </button>
@@ -41,8 +43,9 @@
       <ul class="menu menu-horizontal px-1">
         <li>
           <a
+          target="_blank"
             href="./blogs.html"
-            class="bg-[#FF1F3D] text-base btn btn-error btn-sm text-white"
+            class="bg-[#FF1F3D] text-sm md:text-base btn btn-error no-animation btn-sm text-white rounded-md"
           >
             Blog
           </a>

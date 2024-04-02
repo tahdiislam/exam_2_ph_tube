@@ -1,7 +1,5 @@
 /** @format */
-let allCategories = [];
 let allVideos = [];
-let loading = false;
 
 // category section
 const categories = document.getElementById("categories");
@@ -22,20 +20,18 @@ const fetchCategory = async () => {
     );
     if (!response.ok) throw new Error(response);
     const data = await response.json();
-    allCategories = data?.data;
-    data?.data?.map((element) => {
+    const allCategories = data?.data;
+    allCategories?.map((element) => {
       const div = document.createElement("div");
       div.innerHTML = `
-        <button onclick="loadVideos(${element?.category_id})" class="btn btn-error btn-sm text-sm text-white bg-[#FF1F3D]">
+        <button onclick="loadVideos(${element?.category_id})" class="btn btn-error btn-sm text-sm text-white bg-[#FF1F3D] rounded-md">
         ${element?.category}
           </button>
             `;
       categories.appendChild(div);
     });
-    loading = false;
   } catch (error) {
     console.error(error);
-    loading = false;
   }
 };
 fetchCategory();
@@ -110,7 +106,6 @@ const loadVideos = async (id) => {
     const data = await response.json();
     allVideos = data?.data;
     displayVideos(allVideos);
-    loading = false;
   } catch (error) {
     console.error(error);
   }
@@ -118,11 +113,12 @@ const loadVideos = async (id) => {
 
 loadVideos(1000);
 
+// sort by views
 const handleSort = () => {
-  allVideos.sort((a, b) => {
-    const aViews = parseInt(a.others.views);
-    const bViews = parseInt(b.others.views);
-    return bViews - aViews;
+  allVideos.sort((ele1, ele2) => {
+    const x = parseInt(ele1.others.views);
+    const y = parseInt(ele2.others.views);
+    return y - x;
   });
   displayVideos(allVideos);
 };
